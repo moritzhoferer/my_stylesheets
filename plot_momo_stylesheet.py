@@ -1,45 +1,39 @@
 #! /usr/bin/python
 
-from pylab import *
+import os
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 from scipy import special                                                                                                   
 
 # first select the style sheet
-style.use(['momo','wob'])
+plt.style.use(['momo','wob'])
+
+GRAPHICS_DIR = './figures'
+os.makedirs(GRAPHICS_DIR, exist_ok=True)
 
 # create a new figure
-fig = figure()
+fig = plt.figure()
 
+ax1 = plt.subplot(111)
 
-ax1 = subplot(111)
-
-x = linspace(0, 6 * pi, 100)
+x = np.linspace(0, 6 * np.pi, 100)
 
 for y in range(6):
-	ax1 = plot(
+	ax1 = plt.plot(
 	    x,
 	    special.jv(y, x),
 	    label=r'$J_{} \left( x \right)$'.format(y)
 	    )
 
 # put a label on the y axis
-ylabel(r'Function')
-xlabel(r'Input $x$')
+plt.ylabel(r'Function')
+plt.xlabel(r'Input $x$')
 
-# adjust the scale of the axis
-#xscale('log')
-#yscale('log')
+plt.legend(ncol=2)
 
-# adjust the showed ranges
-# ax1.set_ylim( , )
-
-legend(ncol=2)
-
-#tight_layout(pad=.2)
-
-
-fig.savefig(
-    'pdf_sizes.pdf'
-)
+# fig.tight_layout(pad=.2)
+fig.savefig(GRAPHICS_DIR + '/pdf_sizes.pdf')
 
 # clear figure
-clf()
+plt.clf()
