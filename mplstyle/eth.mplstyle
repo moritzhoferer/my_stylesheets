@@ -1,0 +1,3 @@
+# Set ETH colors
+
+axes.prop_cycle: cycler('color', ['0069B4', '72791C', '91056A', '6F6F6E', 'A8322D', '007A92', '956013', '82BE1E', '1F407A', '3C5A0F'])

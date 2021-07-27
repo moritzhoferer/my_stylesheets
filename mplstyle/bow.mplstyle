@@ -1,0 +1,29 @@
+# For presentation black on white
+
+lines.color: black
+patch.edgecolor: black
+
+text.color: black
+
+axes.facecolor: white
+axes.edgecolor: black
+axes.labelcolor: black
+axes.prop_cycle: cycler('color', ['0069B4', '72791C', '91056A', '6F6F6E', 'A8322D', '007A92', '956013', '82BE1E', '1F407A', '3C5A0F'])
+
+xtick.color: black
+ytick.color: black
+
+grid.color: black
+
+figure.figsize   : 4.589, 2.095  ## figure size in inches
+figure.subplot.left    : 0.155  ## the left side of the subplots of the figure
+figure.subplot.right   : 0.845  ## the right side of the subplots of the figure
+figure.subplot.bottom  : 0.155 ## the bottom of the subplots of the figure
+figure.subplot.top     : 0.975  ## the top of the subplots of the figure
+
+figure.facecolor: white
+figure.edgecolor: white
+
+savefig.facecolor: white
+savefig.edgecolor: white
+
